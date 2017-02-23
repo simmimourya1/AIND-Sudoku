@@ -3,11 +3,15 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: Constraint propogation works only because it tries to reduce the number of possibilties for every position using different constraints to minimize the search space.
+As we know the constraint behind Naked twins algorithm is that no squares outside the two naked twins squares can contain the twin values. Which means if any square outside the twins contain common values then it is eventually going to lose it resulting in a simpler state space. 
+If we consider naked twins algorithm as one of our local constraint then just like elimination and only choice constraint we may assume that the current search space is propogating towards a smaller search space.
+
+In my implementation, the function tries to find all the naked twins and then one by one, it deletes the 'twin values' from all the common peers of the naked twins.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: Diagonal sudoku imposes one extra constraint alongside all the previous ones. One nice approach could be to add extra diagonal units alongwith classic sudoku units. Hence the solver now will consider this constraint as well. It will reject the solutions which donot follow diagonal rules. 
 
 ### Install
 
